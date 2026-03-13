@@ -1,0 +1,39 @@
+:root {
+    color-scheme: light dark;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    color: light-dark(black, white);
+    background-color: light-dark(#f4f4f4, #161616);
+}
+
+.container {
+    padding: 18dvh 0;
+}
+
+.clapper-top {
+    transform-origin: 10px 50px;
+    animation: clap 2.4s ease-in-out infinite;
+}
+
+@keyframes clap {
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(-27deg);
+    }
+    20% {
+        transform: rotate(0);
+    }
+}
