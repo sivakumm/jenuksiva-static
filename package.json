@@ -18,9 +18,19 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "http-server -p 8080 -g -c-1 ./docs"
+    "start": "http-server ./docs -p 8080 -g",
+    "build": "npm run clean && npm run create:docs && npm run copy:assets && npm run copy:cname && npm run copy:robots && npm run minify:css && npm run minify:html",
+    "clean": "rimraf ./docs/",
+    "create:docs": "mkdir docs",
+    "copy:assets": "cp -r ./page/assets ./docs/assets",
+    "copy:cname": "cp ./page/CNAME ./docs/CNAME",
+    "copy:robots": "cp ./page/robots.txt ./docs/robots.txt",
+    "minify:css": "minify ./page/style.css > ./docs/style.css",
+    "minify:html": "minify ./page/index.html > ./docs/index.html"
   },
   "devDependencies": {
-    "http-server": "14.1.1"
+    "http-server": "14.1.1",
+    "minify": "15.2.0",
+    "rimraf": "6.1.3"
   }
 }
