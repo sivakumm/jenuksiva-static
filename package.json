@@ -1,0 +1,26 @@
+{
+  "name": "jenuksiva",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sivakumm/jenuksiva-static#readme",
+  "bugs": {
+    "url": "https://github.com/sivakumm/jenuksiva-static/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivakumm/jenuksiva-static.git"
+  },
+  "license": "ISC",
+  "author": "Mithusan Sivakumar",
+  "type": "commonjs",
+  "main": "script.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "http-server -p 8080 -g -c-1 ./docs"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1"
+  }
+}

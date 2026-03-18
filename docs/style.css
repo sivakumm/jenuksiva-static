@@ -2,6 +2,31 @@
     color-scheme: light dark;
 }
 
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-wrap: balance;
+}
+
+@font-face {
+    font-family: 'Alte Haas Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('./assets/fonts/Alte-Haas-Grotesk-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alte Haas Grotesk';
+    font-style: normal;
+    font-weight: 800;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('./assets/fonts/Alte-Haas-Grotesk-Bold.ttf') format('truetype');
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -11,29 +36,73 @@ html, body {
 }
 
 body {
-    display: flex;
-    justify-content: center;
     color: light-dark(black, white);
-    background-color: light-dark(#f4f4f4, #161616);
-}
+    background-color: #212121;
+    background-image: url('https://texturelabs.org/wp-content/uploads/Texturelabs_Paper_360thumbnail.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 
-.container {
-    padding: 18dvh 0;
-}
-
-.clapper-top {
-    transform-origin: 10px 50px;
-    animation: clap 2.4s ease-in-out infinite;
-}
-
-@keyframes clap {
-    0% {
-        transform: rotate(0);
+    @media (prefers-color-scheme: light) {
+        background-color: #dbd6d2;
+        background-image: url('../images/paper-light.jpeg');
     }
-    10% {
-        transform: rotate(-27deg);
+}
+
+main {
+    max-width: 52rem;
+    margin-inline: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.title {
+    font-family: 'Alte Haas Grotesk', Helvetica, sans-serif;
+}
+
+.video > * {
+    border: 0;
+    width: 100%;
+    aspect-ratio: 33 / 14;
+    object-fit: cover;
+}
+
+.synopsis {
+    margin-bottom: 2rem;
+
+    img {
+        width: 70dvw;
+        max-width: 30rem;
     }
-    20% {
-        transform: rotate(0);
+}
+
+.director {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+
+    h3 {
+        margin-bottom: 0.4rem;
+    }
+
+    h4 {
+        margin-bottom: 1rem;
+    }
+
+    img {
+        min-height: 12rem;
+        height: 22dvw;
+        max-height: 16rem;
+    }
+
+    div {
+        flex: 1 1 18rem;
+    }
+
+    p:has(+ p) {
+        margin-bottom: 1.2rem;
     }
 }
