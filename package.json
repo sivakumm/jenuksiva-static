@@ -19,6 +19,7 @@
   },
   "scripts": {
     "start": "http-server ./docs -p 8080 -g",
+    "start:dev": "http-server ./page -p 8080 -g",
     "build": "npm run clean && npm run create:docs && npm run copy:assets && npm run copy:cname && npm run copy:robots && npm run minify:css && npm run minify:html",
     "clean": "rimraf ./docs/",
     "create:docs": "mkdir docs",
