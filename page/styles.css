@@ -146,7 +146,7 @@ h1 {
 
         &:hover, &:focus, &:active {
             fill: var(--social-media-hover-color, white);
-            scale: 1.2;
+            scale: 1.1;
             filter: drop-shadow(-2px -2px 6px rgba(256, 256, 256, 0.4)) drop-shadow(2px 2px 6px rgba(256, 256, 256, 0.4));
 
             @media (prefers-color-scheme: light) {
