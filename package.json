@@ -26,7 +26,7 @@
     "copy:assets": "cp -r ./page/assets ./docs/assets",
     "copy:cname": "cp ./page/CNAME ./docs/CNAME",
     "copy:robots": "cp ./page/robots.txt ./docs/robots.txt",
-    "minify:css": "minify ./page/style.css > ./docs/style.css",
+    "minify:css": "minify page/styles.css > ./docs/styles.css",
     "minify:html": "minify ./page/index.html > ./docs/index.html"
   },
   "devDependencies": {
