@@ -72,7 +72,12 @@ main {
 }
 
 h1 {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.1rem;
+    font-size: clamp(1rem, 8dvw, 2.2rem);
+}
+
+h2 {
+    font-size: clamp(0.6rem, 5dvw, 1.4rem);
 }
 
 .video > * {
