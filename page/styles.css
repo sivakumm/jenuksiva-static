@@ -80,6 +80,10 @@ h2 {
     font-size: clamp(0.6rem, 5dvw, 1.4rem);
 }
 
+.video {
+    background-color: light-dark(#e1dad7, #191919);
+}
+
 .video > * {
     border: 0;
     width: 100%;
