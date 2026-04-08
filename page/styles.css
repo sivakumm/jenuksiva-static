@@ -136,6 +136,17 @@ h2 {
     }
 }
 
+.logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+
+    @media (max-width: 600px) {
+        top: 1.25rem;
+        left: 1.25rem;
+    }
+}
+
 .social-media {
     position: absolute;
     top: 2rem;
