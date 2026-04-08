@@ -84,11 +84,17 @@ h2 {
     background-color: light-dark(#e1dad7, #191919);
 }
 
-.video > * {
+.video > div {
     border: 0;
     width: 100%;
     aspect-ratio: 33 / 14;
     object-fit: cover;
+
+    iframe {
+        border: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .synopsis {
