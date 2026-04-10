@@ -108,6 +108,7 @@ h1 {
     flex-wrap: wrap;
     gap: 1.6rem;
     text-align: justify;
+    margin-bottom: 2rem;
 
     h3 {
         margin-bottom: 0.4rem;
@@ -197,5 +198,36 @@ h1 {
 
     a[aria-label*="Twitter"] {
         --social-media-hover-color: black;
+    }
+}
+
+.bts-gallery {
+
+    ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 1fr;
+        gap: 1rem;
+    }
+
+    h3 {
+        margin-bottom: 0.8rem;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .vertical {
+        grid-row: span 2;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
