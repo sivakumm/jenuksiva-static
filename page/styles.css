@@ -110,6 +110,10 @@ h1 {
         margin-bottom: 0.8rem;
     }
 
+    p {
+        text-align: justify;
+    }
+
     p span:not(.role) {
         font-weight: bold;
         margin-inline-end: 0.3rem;
