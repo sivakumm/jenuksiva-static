@@ -42,19 +42,22 @@ body {
     font-family: 'Alte Haas Grotesk', Helvetica, sans-serif;
     color: light-dark(black, white);
     background-color: light-dark(#dbd6d2, #212121);
-}
+    background-position: center center;
+    background-size: cover;
+    background-image: url('./assets/images/paper-light-1536.webp');
+    background-image: image-set(
+            url('./assets/images/paper-light-800.webp') 1x,
+            url('./assets/images/paper-light-1536.webp') 2x,
+            url('./assets/images/paper-light-2500.webp') 3x,
+    );
 
-.background {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+    @media (prefers-color-scheme: dark) {
+        background-image: url('./assets/images/paper-dark-1536.webp');
+        background-image: image-set(
+                url('./assets/images/paper-dark-800.webp') 1x,
+                url('./assets/images/paper-dark-1536.webp') 2x,
+                url('./assets/images/paper-dark-2500.webp') 3x,
+        );
     }
 }
 
