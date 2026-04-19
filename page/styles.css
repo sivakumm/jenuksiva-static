@@ -286,5 +286,6 @@ footer {
 
     img {
         width: 8rem;
+        height: auto;
     }
 }
